@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email = ["jon@jonallured.com"]
 
   spec.summary = "Very tiny client gem for the Bluesky API."
-  spec.description = spec.description
+  spec.description = spec.summary
   spec.homepage = "https://github.com/jonallured/tinysky"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
