@@ -1,4 +1,4 @@
-# Tinysky
+# Tinysky [![CI][badge]][actions]
 
 TODO: Delete this and the text below, and describe your gem
 
@@ -33,3 +33,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/jonall
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+[actions]: https://github.com/jonallured/tinysky/actions
+[badge]: https://github.com/jonallured/tinysky/actions/workflows/main.yml/badge.svg
