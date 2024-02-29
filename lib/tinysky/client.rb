@@ -12,7 +12,7 @@ module Tinysky
     end
 
     def create_session
-      response = @connection.post(CREATE_SESSION_PATH, @credentials.to_json)
+      response = @connection.post(CREATE_SESSION_PATH, @credentials)
 
       @did = response.body["did"]
       @access_token = Token.new(response.body["accessJwt"])

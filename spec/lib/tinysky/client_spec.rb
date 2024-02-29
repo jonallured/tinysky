@@ -21,7 +21,7 @@ describe Tinysky::Client do
     mock_create_session_response = double(:mock_create_session_response, body: mock_response_body)
     expect(mock_connection).to receive(:post).with(
       Tinysky::CREATE_SESSION_PATH,
-      credentials.to_json
+      credentials
     ).and_return(mock_create_session_response)
     client = Tinysky::Client.new(credentials, mock_connection)
     client.create_session

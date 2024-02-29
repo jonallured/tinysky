@@ -18,13 +18,8 @@ module Tinysky
   end
 
   def self.generate_connection
-    headers = {
-      "Accept" => "application/json",
-      "Content-Type" => "application/json"
-    }
-
-    Faraday.new(url: ROOT_URL, headers: headers) do |f|
-      f.adapter Faraday.default_adapter
+    Faraday.new(url: ROOT_URL) do |f|
+      f.request :json
       f.response :json
     end
   end
