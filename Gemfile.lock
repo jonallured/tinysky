@@ -3,17 +3,21 @@ PATH
   specs:
     tinysky (0.1.0)
       faraday
+      jwt
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    base64 (0.2.0)
     diff-lcs (1.5.1)
     faraday (2.9.0)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
       net-http
     json (2.7.1)
+    jwt (2.8.0)
+      base64
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
     net-http (0.4.1)
