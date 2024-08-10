@@ -1,32 +1,72 @@
 describe Tinysky::Client do
-  let(:credentials) { {identifier: "tinyskygem.bsky.social", password: "shhh"} }
+  let(:credentials) { {app_password: "shhh", handle: "tinyskygem.bsky.social"} }
   let(:mock_connection) { double(:mock_connection) }
 
+  let(:expires_at) { Time.at(Time.now.to_i + 100) }
+
+  let(:mock_access_jwt) do
+    payload = {"exp" => expires_at.to_i}
+    JWT.encode(payload, nil, "none")
+  end
+
+  let(:mock_create_session_response) do
+    mock_response_body = {"accessJwt" => mock_access_jwt}
+    double(:mock_create_session_response, body: mock_response_body)
+  end
+
+  before do
+    expect(Tinysky).to receive(:generate_connection).and_return(mock_connection)
+  end
+
   it "starts off empty" do
-    client = Tinysky::Client.new(credentials, mock_connection)
-    expect(client.did).to eq nil
-    expect(client.access_token).to eq nil
-    expect(client.refresh_token).to eq nil
+    client = Tinysky::Client.new(credentials)
+    expect(client.access_jwt).to eq nil
+    expect(client.expires_at).to eq nil
   end
 
   it "can create a session" do
-    payload = {"exp" => 123}
-    mock_access_jwt = JWT.encode(payload, nil, "none")
-    mock_refresh_jwt = JWT.encode(payload, nil, "none")
-    mock_response_body = {
-      "did" => "did:plc:abc123",
-      "accessJwt" => mock_access_jwt,
-      "refreshJwt" => mock_refresh_jwt
+    client = Tinysky::Client.new(credentials)
+    expected_body = {
+      identifier: credentials[:handle],
+      password: credentials[:app_password]
     }
-    mock_create_session_response = double(:mock_create_session_response, body: mock_response_body)
     expect(mock_connection).to receive(:post).with(
-      Tinysky::CREATE_SESSION_PATH,
-      credentials
+      Tinysky::CREATE_SESSION_PATH, expected_body
     ).and_return(mock_create_session_response)
-    client = Tinysky::Client.new(credentials, mock_connection)
+
     client.create_session
-    expect(client.did).to eq "did:plc:abc123"
-    expect(client.access_token.raw_value).to eq mock_access_jwt
-    expect(client.refresh_token.raw_value).to eq mock_refresh_jwt
+
+    expect(client.access_jwt).to eq mock_access_jwt
+    expect(client.expires_at).to eq expires_at
+  end
+
+  it "can create a record" do
+    client = Tinysky::Client.new(credentials)
+    allow(mock_connection).to receive(:post).with(
+      Tinysky::CREATE_SESSION_PATH,
+      anything
+    ).and_return(mock_create_session_response)
+    client.create_session
+
+    expected_body = {
+      collection: Tinysky::POST_LEXICON_TYPE,
+      record: {
+        "$type" => Tinysky::POST_LEXICON_TYPE,
+        "langs" => ["en-US"],
+        "text" => "hello world!",
+        "createdAt" => anything
+      },
+      repo: credentials[:handle]
+    }
+    expected_headers = {
+      "Authorization" => "Bearer #{mock_access_jwt}"
+    }
+    expect(mock_connection).to receive(:post).with(
+      Tinysky::CREATE_RECORD_PATH,
+      expected_body,
+      expected_headers
+    )
+
+    client.create_record("hello world!")
   end
 end
