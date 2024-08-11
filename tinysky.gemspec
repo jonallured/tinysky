@@ -6,14 +6,13 @@ Gem::Specification.new do |spec|
   spec.authors = ["Jon Allured"]
   spec.email = ["jon@jonallured.com"]
 
-  spec.summary = "Very tiny client gem for the Bluesky API."
-  spec.description = spec.summary
+  spec.summary = "Tiny client for the Bluesky API."
+  spec.description = "A tiny client gem for the Bluesky API that focuses on creating posts."
   spec.homepage = "https://github.com/jonallured/tinysky"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = spec.homepage
 
   spec.files = Dir.chdir(__dir__) do
     `git ls-files -z`.split("\x0").reject do |f|
@@ -26,6 +25,6 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "faraday"
-  spec.add_runtime_dependency "jwt"
+  spec.add_dependency "faraday", "~> 2"
+  spec.add_dependency "jwt", "~> 2"
 end
