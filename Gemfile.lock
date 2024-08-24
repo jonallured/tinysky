@@ -10,6 +10,7 @@ GEM
   specs:
     ast (2.4.2)
     base64 (0.2.0)
+    bump (0.10.0)
     diff-lcs (1.5.1)
     faraday (2.10.1)
       faraday-net_http (>= 2.0, < 3.2)
@@ -84,6 +85,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bump
   rake
   rspec
   standard
