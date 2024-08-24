@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog][] and this project adheres to
 ### Added
 
 * Add a CHANGELOG ([#3][])
+* Add release script ([#4][])
 
 ### Changed
 
@@ -26,6 +27,7 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 [Unreleased]: https://github.com/jonallured/tinysky/compare/v0.0.1...HEAD
 [#3]: https://github.com/jonallured/tinysky/pull/3
+[#4]: https://github.com/jonallured/tinysky/pull/4
 
 ## [0.0.1][] - 2024-08-11
 

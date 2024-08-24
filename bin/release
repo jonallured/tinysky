@@ -1,0 +1,6 @@
+#! /bin/sh
+set -ex
+
+bump patch --tag
+git push origin main
+git push origin --tags
