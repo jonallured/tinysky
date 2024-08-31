@@ -20,6 +20,10 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Fixed
 
+* Improve release script ([#5][])
+
+[#5]: https://github.com/jonallured/tinysky/pull/5
+
 ### Security
 
 [Unreleased]: https://github.com/jonallured/tinysky/compare/v0.0.2...HEAD
