@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tinysky (0.0.1)
+    tinysky (0.0.2)
       faraday (~> 2)
       jwt (~> 2)
 
