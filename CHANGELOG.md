@@ -12,9 +12,6 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Added
 
-* Add a CHANGELOG ([#3][])
-* Add release script ([#4][])
-
 ### Changed
 
 ### Deprecated
@@ -25,9 +22,18 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Security
 
-[Unreleased]: https://github.com/jonallured/tinysky/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/jonallured/tinysky/compare/v0.0.2...HEAD
+
+## [0.0.2][] - 2024-08-31
+
+### Added
+
+* Add a CHANGELOG ([#3][])
+* Add release script ([#4][])
+
 [#3]: https://github.com/jonallured/tinysky/pull/3
 [#4]: https://github.com/jonallured/tinysky/pull/4
+[0.0.2]: https://github.com/jonallured/tinysky/releases/tag/v0.0.2
 
 ## [0.0.1][] - 2024-08-11
 
