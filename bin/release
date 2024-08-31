@@ -2,5 +2,7 @@
 set -ex
 
 bump patch --tag
+gem build --output tinysky.gem
+gem push tinysky.gem
 git push origin main
 git push origin --tags
