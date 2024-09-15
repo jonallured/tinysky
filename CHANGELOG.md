@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Changed
 
+* Bundle update and bump Ruby matrix on CI ([#6][])
+
 ### Deprecated
 
 ### Removed
@@ -23,6 +25,7 @@ The format is based on [Keep a Changelog][] and this project adheres to
 * Improve release script ([#5][])
 
 [#5]: https://github.com/jonallured/tinysky/pull/5
+[#6]: https://github.com/jonallured/tinysky/pull/6
 
 ### Security
 
