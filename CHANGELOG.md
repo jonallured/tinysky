@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Added
 
+* Add update script ([#7][])
+
 ### Changed
 
 ### Deprecated
@@ -55,3 +57,4 @@ The format is based on [Keep a Changelog][] and this project adheres to
 [#4]: https://github.com/jonallured/tinysky/pull/4
 [#5]: https://github.com/jonallured/tinysky/pull/5
 [#6]: https://github.com/jonallured/tinysky/pull/6
+[#7]: https://github.com/jonallured/tinysky/pull/7
