@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Changed
 
+* Update Ruby matrix for CI ([#11][])
+
 ### Deprecated
 
 ### Removed
@@ -58,3 +60,4 @@ The format is based on [Keep a Changelog][] and this project adheres to
 [#5]: https://github.com/jonallured/tinysky/pull/5
 [#6]: https://github.com/jonallured/tinysky/pull/6
 [#7]: https://github.com/jonallured/tinysky/pull/7
+[#11]: https://github.com/jonallured/tinysky/pull/11

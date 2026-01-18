@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.description = "A tiny client gem for the Bluesky API that focuses on creating posts."
   spec.homepage = "https://github.com/jonallured/tinysky"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 3.2"
 
   spec.metadata["homepage_uri"] = spec.homepage
 
