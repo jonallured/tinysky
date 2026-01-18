@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "faraday", "~> 2"
   spec.add_dependency "jwt", "~> 2"
+  spec.add_dependency "zeitwerk"
 end

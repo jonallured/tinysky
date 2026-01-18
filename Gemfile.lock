@@ -4,6 +4,7 @@ PATH
     tinysky (0.0.3)
       faraday (~> 2)
       jwt (~> 2)
+      zeitwerk
 
 GEM
   remote: https://rubygems.org/
@@ -79,6 +80,7 @@ GEM
       rubocop-performance (~> 1.21.0)
     unicode-display_width (2.6.0)
     uri (0.13.1)
+    zeitwerk (2.7.4)
 
 PLATFORMS
   ruby
