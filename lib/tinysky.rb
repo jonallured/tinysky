@@ -1,8 +1,9 @@
 require "faraday"
 require "jwt"
+require "zeitwerk"
 
-require_relative "tinysky/version"
-require_relative "tinysky/client"
+loader = Zeitwerk::Loader.for_gem
+loader.setup
 
 module Tinysky
   ROOT_URL = "https://bsky.social"

@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Changed
 
+* Use Zeitwerk for loading ([#10][])
 * Update Ruby matrix for CI ([#11][])
 
 ### Deprecated
@@ -53,11 +54,12 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 [0.0.1]: https://github.com/jonallured/tinysky/releases/tag/v0.0.1
 [0.0.2]: https://github.com/jonallured/tinysky/releases/tag/v0.0.2
-[0.0.2]: https://github.com/jonallured/tinysky/releases/tag/v0.0.3
+[0.0.3]: https://github.com/jonallured/tinysky/releases/tag/v0.0.3
 
 [#3]: https://github.com/jonallured/tinysky/pull/3
 [#4]: https://github.com/jonallured/tinysky/pull/4
 [#5]: https://github.com/jonallured/tinysky/pull/5
 [#6]: https://github.com/jonallured/tinysky/pull/6
 [#7]: https://github.com/jonallured/tinysky/pull/7
+[#10]: https://github.com/jonallured/tinysky/pull/10
 [#11]: https://github.com/jonallured/tinysky/pull/11
