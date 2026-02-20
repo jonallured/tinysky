@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog][] and this project adheres to
 * Use Zeitwerk for loading ([#10][])
 * Update Ruby matrix for CI ([#11][])
 * Upgrade to Ruby 4 ([#12][])
+* Improve CI configuration ([#13][])
 
 ### Deprecated
 
@@ -65,3 +66,4 @@ The format is based on [Keep a Changelog][] and this project adheres to
 [#10]: https://github.com/jonallured/tinysky/pull/10
 [#11]: https://github.com/jonallured/tinysky/pull/11
 [#12]: https://github.com/jonallured/tinysky/pull/12
+[#13]: https://github.com/jonallured/tinysky/pull/13
