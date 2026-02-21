@@ -43,6 +43,18 @@ module Tinysky
       @connection.post(path, body, headers)
     end
 
+    def upload_blob(blob_data, content_type)
+      create_session if expired_token?
+
+      headers = {
+        "Authorization" => "Bearer #{@access_jwt}",
+        "Content-Type" => content_type
+      }
+
+      path = Tinysky::Endpoints::REPO_UPLOAD_BLOB
+      @connection.post(path, blob_data, headers)
+    end
+
     private
 
     def expired_token?
