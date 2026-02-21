@@ -17,6 +17,45 @@ describe Tinysky::FeedPost do
       end
     end
 
+    context "with nil embed" do
+      it "ignores the embed option" do
+        text = "hello world!"
+        embed = nil
+        options = {embed: embed}
+        feed_post = Tinysky::FeedPost.new(text, options)
+        expect(feed_post.to_hash.keys).to eq(
+          ["$type", "createdAt", "langs", "text"]
+        )
+      end
+    end
+
+    context "with an embed" do
+      it "returns a shape with that embed" do
+        text = "hello world!"
+        as_of = DateTime.now
+        embed = Tinysky::ExternalEmbed.new({})
+        options = {as_of: as_of, embed: embed}
+        feed_post = Tinysky::FeedPost.new(text, options)
+        expect(feed_post.to_hash).to eq(
+          {
+            "$type" => Tinysky::Lexicon::FEED_POST,
+            "createdAt" => as_of.iso8601,
+            "embed" => {
+              "$type" => Tinysky::Lexicon::EXTERNAL_EMBED,
+              "external" => {
+                "description" => nil,
+                "thumb" => nil,
+                "title" => nil,
+                "uri" => nil
+              }
+            },
+            "langs" => ["en-US"],
+            "text" => "hello world!"
+          }
+        )
+      end
+    end
+
     context "with nil facets" do
       it "ignores the facets option" do
         text = "hello world!"
