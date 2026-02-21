@@ -29,18 +29,11 @@ module Tinysky
     def create_record(text)
       create_session if expired_token?
 
-      type = Tinysky::Lexicon::FEED_POST
-
-      record = {
-        "$type" => type,
-        "createdAt" => DateTime.now.iso8601,
-        "langs" => ["en-US"],
-        "text" => text
-      }
+      feed_post = FeedPost.new(text)
 
       body = {
-        collection: type,
-        record: record,
+        collection: Tinysky::Lexicon::FEED_POST,
+        record: feed_post.to_hash,
         repo: @credentials[:handle]
       }
 
