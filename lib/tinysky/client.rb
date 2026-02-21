@@ -26,10 +26,10 @@ module Tinysky
       response
     end
 
-    def create_record(text)
+    def create_record(text, options)
       create_session if expired_token?
 
-      feed_post = FeedPost.new(text)
+      feed_post = FeedPost.new(text, options)
 
       body = {
         collection: Tinysky::Lexicon::FEED_POST,

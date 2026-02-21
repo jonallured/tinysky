@@ -67,6 +67,6 @@ describe Tinysky::Client do
       expected_headers
     )
 
-    client.create_record("hello world!")
+    client.create_record("hello world!", {})
   end
 end
