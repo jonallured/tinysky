@@ -16,7 +16,8 @@ module Tinysky
         password: @credentials[:app_password]
       }
 
-      response = @connection.post(CREATE_SESSION_PATH, body)
+      path = Tinysky::Endpoints::SERVER_CREATE_SESSION
+      response = @connection.post(path, body)
 
       @access_jwt = response.body["accessJwt"]
       payload, _header = JWT.decode(@access_jwt, nil, false)
@@ -28,22 +29,25 @@ module Tinysky
     def create_record(text)
       create_session if expired_token?
 
+      type = Tinysky::Lexicon::FEED_POST
+
       record = {
-        "$type" => POST_LEXICON_TYPE,
+        "$type" => type,
         "createdAt" => DateTime.now.iso8601,
         "langs" => ["en-US"],
         "text" => text
       }
 
       body = {
-        collection: POST_LEXICON_TYPE,
+        collection: type,
         record: record,
         repo: @credentials[:handle]
       }
 
       headers = {"Authorization" => "Bearer #{@access_jwt}"}
 
-      @connection.post(CREATE_RECORD_PATH, body, headers)
+      path = Tinysky::Endpoints::REPO_CREATE_RECORD
+      @connection.post(path, body, headers)
     end
 
     private

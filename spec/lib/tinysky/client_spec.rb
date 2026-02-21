@@ -31,7 +31,7 @@ describe Tinysky::Client do
       password: credentials[:app_password]
     }
     expect(mock_connection).to receive(:post).with(
-      Tinysky::CREATE_SESSION_PATH, expected_body
+      Tinysky::Endpoints::SERVER_CREATE_SESSION, expected_body
     ).and_return(mock_create_session_response)
 
     client.create_session
@@ -43,15 +43,15 @@ describe Tinysky::Client do
   it "can create a record" do
     client = Tinysky::Client.new(credentials)
     allow(mock_connection).to receive(:post).with(
-      Tinysky::CREATE_SESSION_PATH,
+      Tinysky::Endpoints::SERVER_CREATE_SESSION,
       anything
     ).and_return(mock_create_session_response)
     client.create_session
 
     expected_body = {
-      collection: Tinysky::POST_LEXICON_TYPE,
+      collection: Tinysky::Lexicon::FEED_POST,
       record: {
-        "$type" => Tinysky::POST_LEXICON_TYPE,
+        "$type" => Tinysky::Lexicon::FEED_POST,
         "langs" => ["en-US"],
         "text" => "hello world!",
         "createdAt" => anything
@@ -62,7 +62,7 @@ describe Tinysky::Client do
       "Authorization" => "Bearer #{mock_access_jwt}"
     }
     expect(mock_connection).to receive(:post).with(
-      Tinysky::CREATE_RECORD_PATH,
+      Tinysky::Endpoints::REPO_CREATE_RECORD,
       expected_body,
       expected_headers
     )

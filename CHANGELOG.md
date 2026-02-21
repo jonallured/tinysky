@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog][] and this project adheres to
 * Update Ruby matrix for CI ([#11][])
 * Upgrade to Ruby 4 ([#12][])
 * Improve CI configuration ([#13][])
+* Extract modules for api details ([#14][])
 
 ### Deprecated
 
@@ -67,3 +68,4 @@ The format is based on [Keep a Changelog][] and this project adheres to
 [#11]: https://github.com/jonallured/tinysky/pull/11
 [#12]: https://github.com/jonallured/tinysky/pull/12
 [#13]: https://github.com/jonallured/tinysky/pull/13
+[#14]: https://github.com/jonallured/tinysky/pull/14
