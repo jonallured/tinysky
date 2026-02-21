@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog][] and this project adheres to
 ### Added
 
 * Add update script ([#7][])
+* Add support for link facets ([#15][])
 
 ### Changed
 
@@ -69,3 +70,4 @@ The format is based on [Keep a Changelog][] and this project adheres to
 [#12]: https://github.com/jonallured/tinysky/pull/12
 [#13]: https://github.com/jonallured/tinysky/pull/13
 [#14]: https://github.com/jonallured/tinysky/pull/14
+[#15]: https://github.com/jonallured/tinysky/pull/15
