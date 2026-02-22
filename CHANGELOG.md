@@ -12,6 +12,20 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.0.4][] - 2026-02-22
+
+### Added
+
 * Add update script ([#7][])
 * Add support for link facets ([#15][])
 * Add support for record embeds ([#16][])
@@ -24,14 +38,6 @@ The format is based on [Keep a Changelog][] and this project adheres to
 * Improve CI configuration ([#13][])
 * Extract modules for api details ([#14][])
 * Move to automated release on CI ([#17][])
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.0.3][] - 2024-09-15
 
@@ -56,11 +62,12 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 * Initial release
 
-[Unreleased]: https://github.com/jonallured/tinysky/compare/v0.0.3...HEAD
+[Unreleased]: https://github.com/jonallured/tinysky/compare/v0.0.4...HEAD
 
 [0.0.1]: https://github.com/jonallured/tinysky/releases/tag/v0.0.1
 [0.0.2]: https://github.com/jonallured/tinysky/releases/tag/v0.0.2
 [0.0.3]: https://github.com/jonallured/tinysky/releases/tag/v0.0.3
+[0.0.4]: https://github.com/jonallured/tinysky/releases/tag/v0.0.4
 
 [#3]: https://github.com/jonallured/tinysky/pull/3
 [#4]: https://github.com/jonallured/tinysky/pull/4
