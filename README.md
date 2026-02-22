@@ -35,6 +35,21 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Releasing
+
+The release process is automated but should start with a commit to update the
+CHANGELOG. This commit should add the new version and then update the Unreleased
+section back to defaults. It should also update the links. Once that's done then
+the actual process can be kicked off like so:
+
+```
+$ bin/release
+```
+
+Which will create a commit that bumps the patch version, push the commit to
+GitHub and then push the tag that triggers the release.yml workflow. That
+workflow will run tests and then push to RubyGems.org.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/jonallured/tinysky.
