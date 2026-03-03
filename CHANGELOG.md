@@ -14,8 +14,6 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Changed
 
-* Upgrade JWT dependency ([#18][])
-
 ### Deprecated
 
 ### Removed
@@ -23,6 +21,12 @@ The format is based on [Keep a Changelog][] and this project adheres to
 ### Fixed
 
 ### Security
+
+## [0.0.5][] - 2026-03-03
+
+### Changed
+
+* Upgrade JWT dependency ([#18][])
 
 ## [0.0.4][] - 2026-02-22
 
@@ -64,12 +68,13 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 * Initial release
 
-[Unreleased]: https://github.com/jonallured/tinysky/compare/v0.0.4...HEAD
+[Unreleased]: https://github.com/jonallured/tinysky/compare/v0.0.5...HEAD
 
 [0.0.1]: https://github.com/jonallured/tinysky/releases/tag/v0.0.1
 [0.0.2]: https://github.com/jonallured/tinysky/releases/tag/v0.0.2
 [0.0.3]: https://github.com/jonallured/tinysky/releases/tag/v0.0.3
 [0.0.4]: https://github.com/jonallured/tinysky/releases/tag/v0.0.4
+[0.0.5]: https://github.com/jonallured/tinysky/releases/tag/v0.0.5
 
 [#3]: https://github.com/jonallured/tinysky/pull/3
 [#4]: https://github.com/jonallured/tinysky/pull/4
