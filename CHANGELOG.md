@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog][] and this project adheres to
 
 ### Changed
 
+* Upgrade JWT dependency ([#18][])
+
 ### Deprecated
 
 ### Removed
@@ -82,3 +84,4 @@ The format is based on [Keep a Changelog][] and this project adheres to
 [#15]: https://github.com/jonallured/tinysky/pull/15
 [#16]: https://github.com/jonallured/tinysky/pull/16
 [#17]: https://github.com/jonallured/tinysky/pull/17
+[#18]: https://github.com/jonallured/tinysky/pull/18
