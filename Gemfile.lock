@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tinysky (0.0.4)
+    tinysky (0.0.5)
       faraday (~> 2)
       jwt
       zeitwerk
